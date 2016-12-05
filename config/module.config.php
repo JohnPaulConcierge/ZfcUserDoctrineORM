@@ -1,4 +1,10 @@
 <?php
+
+namespace ZfcUserDoctrineORM;
+
+use ZfcUserDoctrineORM\Mapper\UserFactory;
+use ZfcUserDoctrineORM\Options\ModuleOptionsFactory;
+
 return array(
     'doctrine' => array(
         'driver' => array(
@@ -14,4 +20,13 @@ return array(
             )
         )
     ),
+    'service_manager' => [
+        'aliases' => array(
+            'zfcuser_doctrine_em' => 'Doctrine\ORM\EntityManager',
+        ),
+        'factories' => array(
+            'zfcuser_module_options' => ModuleOptionsFactory::class,
+            'zfcuser_user_mapper' => UserFactory::class
+        )
+    ]
 );

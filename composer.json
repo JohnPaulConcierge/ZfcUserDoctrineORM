@@ -27,11 +27,8 @@
         "doctrine/doctrine-orm-module": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "ZfcUserDoctrineORM": "src/"
-        },
-        "classmap": [
-            "./"
-        ]
+        "psr-4": {
+            "ZfcUserDoctrineORM\\": "src/"
+        }
     }
 }
